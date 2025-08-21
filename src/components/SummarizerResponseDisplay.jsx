@@ -8,9 +8,8 @@ const SummarizerResponseDisplay = ({ responseText }) => {
   return (
     <div
       className="max-w-4xl mx-auto p-6 rounded-xl shadow-lg my-8
-                 bg-white bg-opacity-70 backdrop-blur-sm
-                 transition-opacity duration-700 ease-in-out"
-      style={{ animation: 'fadeIn 0.8s ease forwards' }}
+                 bg-white bg-opacity-70 backdrop-blur-sm overflow-y-auto"
+      style={{ maxHeight: '600px', animation: 'fadeIn 0.8s ease forwards' }}
     >
       <div className="prose prose-indigo prose-lg">
         <ReactMarkdown rehypePlugins={[rehypeSanitize]}>
@@ -25,6 +24,7 @@ const SummarizerResponseDisplay = ({ responseText }) => {
         }
       `}</style>
     </div>
+
   );
 };
 
