@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Briefly Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based frontend application to input text and display summarized responses from the Briefly backend API. It features a modern UI with Tailwind CSS styling and Markdown rendering.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- User input textarea with material-inspired gradient styling
+- Submit button with loading spinner and gradient animation
+- Displays summarized output formatted as Markdown
+- Responsive and accessible UI
+- Client-side input validation and error display
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+- Node.js (v16 or higher recommended)
+- npm (comes with Node.js) or Yarn
+- Backend API running and accessible at `http://localhost:8081`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Clone the repo
+```
+git clone <repo-url>
+cd briefly
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Install dependencies
 
-### `npm run eject`
+```
+npm install
+```
+### Configure Backend API URL
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Update fetch calls or create an `.env` file in the project root with:
+REACT_APP_BACKEND_URL=http://localhost:8081
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Then use this env var in your API calls:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+const response = await fetch(${process.env.REACT_APP_BACKEND_URL}/api/summarize?agent=gemini, {...});
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Run in Development Mode
+```
+npm start
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Open `http://localhost:3000` in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `src/App.jsx`: Main app component handling user input, fetch, and response display.
+- `src/components/SummarizerResponseDisplay.jsx`: Renders Markdown with sanitized content.
+- `src/index.css`: Imports Tailwind CSS directives.
+- `tailwind.config.js`: Tailwind configuration specifying source files for purging.
+- `.env`: Environment variables for backend URL.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Styling and UI
 
-### Making a Progressive Web App
+- Uses Tailwind CSS and `@tailwindcss/typography` plugin for Markdown styling.
+- Gradient backgrounds and shadows for inputs and buttons.
+- Responsive design with maximum container widths.
+- Loading spinner SVG in button for feedback.
+- Floating label style textarea with focus rings for accessibility.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Troubleshooting
 
-### Deployment
+- Ensure backend API is running and reachable.
+- Check browser console for network or CORS errors.
+- Validate environment variables if API URLs are not loading.
+- Tailwind styles may require rebuild if classes do not apply.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React 18+
+- Tailwind CSS 3.x
+- React Markdown for rendering summaries
+- Vite or Create-React-App (depending on setup)
+- JavaScript (ES6+)
+
+---
+
+## License
+
+This project is licensed under the MIT License.
