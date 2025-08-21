@@ -22,6 +22,17 @@ This is a React-based frontend application to input text and display summarized 
 
 ---
 
+## Sample Screenshots 
+<img width="1512" height="982" alt="Briefly-1" src="https://github.com/user-attachments/assets/753e8211-5d23-4009-a7ea-44593c3a2d6d" />
+<img width="1512" height="982" alt="Briefly-2" src="https://github.com/user-attachments/assets/99cc0d01-cfc4-428d-96e1-ee7401f37f20" />
+<img width="1512" height="982" alt="Briefly-3" src="https://github.com/user-attachments/assets/086fe0c9-1aa0-4bbd-b9e0-3e2c300a1c09" />
+<img width="1512" height="982" alt="Briefly-4" src="https://github.com/user-attachments/assets/4fa1b97f-c084-4813-8aad-9588426c28d1" />
+<img width="1512" height="982" alt="Briefly-5" src="https://github.com/user-attachments/assets/75059663-5835-454f-a7aa-c9eea0672755" />
+
+
+
+
+
 ## Getting Started
 
 ### Clone the repo
