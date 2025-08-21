@@ -28,6 +28,8 @@ This is a React-based frontend application to input text and display summarized 
 <img width="1512" height="982" alt="Briefly-3" src="https://github.com/user-attachments/assets/086fe0c9-1aa0-4bbd-b9e0-3e2c300a1c09" />
 <img width="1512" height="982" alt="Briefly-4" src="https://github.com/user-attachments/assets/4fa1b97f-c084-4813-8aad-9588426c28d1" />
 <img width="1512" height="982" alt="Briefly-5" src="https://github.com/user-attachments/assets/75059663-5835-454f-a7aa-c9eea0672755" />
+<img width="1512" height="982" alt="Briefly-RAG" src="https://github.com/user-attachments/assets/c0537abf-8f7d-4c6f-bb85-7c99520f6192" />
+
 
 
 
